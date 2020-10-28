@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Control de Gastos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <section class="container">
+        <div class="row contenido">
+            <div class="five columns ">
+                <h2>Control de Gastos</h2>
+                <form id="agregar-mov" action="#">
+                    <div class="u-full-width">
+                        <label for="concepto">Concepto:</label>
+                        <input type="text" class="u-full-width" id="concepto">
+                    </div>
+                    <div class="u-full-width">
+                        <label for="importe">Importe:</label>
+                        <input type="text" class="u-full-width" id="importe">
+                    </div>
+                    <div class="row">
+                        <div class="six columns ing">
+                            <label for="ingreso" class="ing"><input type="radio" name="tipo" value="ing" checked>
+                                Ingreso</label>
+                        </div>
+                        <div class="six columns">
+                            <label for="egreso" class="egr"><input type="radio" name="tipo" value="egr">
+                                Egreso</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="button-primary u-full-width">Agregar</button>
+                </form>
+            </div>
+            <div class="seven columns">
+                <div class="saldo">
+                    <h2>Saldo $ <span id="total">0</span></h2>
+                </div>
+                <div id="caja-mov">
+                    <table id="movimientos" class="twelve columns">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Concepto</th>
+                                <th>Importe</th>
+                                <th><a href="#" id="borrar-cta" class="disabled"><i class="far fa-trash-alt"></i></a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
